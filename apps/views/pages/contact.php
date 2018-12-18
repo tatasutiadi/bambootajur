@@ -43,40 +43,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- FOOTER -->
 
 <div style="color: #000;background-color:#fff;text-align:center;text-align: justify;">
-<div class="row bg-footer no-margin">
+    <div class="row bg-footer no-margin">
 
-<div class="col-md-4 f-first">
-    <div class="detail-footer">
-        <p class="header-footer">Marketing Gallery</p>
-        Jalan Raya Tajur No.30, Tajur – Kota Bogor 16141<br>
-        Jawa Barat, Indonesia<br>
-        Phone <a href="https://api.whatsapp.com/send?phone=628111403280&text=Halo%20Marketing%20Gallery%20Saya%20Mau%20Menanyakan%20.." class="fp-whatsapp">0811 1403 280 &nbsp; <img src="<?= base_url();?>assets/images/icon/whatsapp.png" class="f-whatsapp" /></a> <br>
-        Phone 0251-8574 255<br>
-        Email bambootajur@gmail.com<br>
-    </div>
-</div>
+        <div class="col-md-4 f-first">
+            <div class="detail-footer">
+                <p class="header-footer">Marketing Gallery</p>
+                Jalan Raya Tajur No.30, Tajur – Kota Bogor 16141<br>
+                Jawa Barat, Indonesia<br>
+                Phone 0811 1403 280<br>
+                Phone 0251-8574 255<br>
+                Email bambootajur@gmail.com<br>
+            </div>
+        </div>
 
-<div class="col-md-4">
-    <div class="detail-footer">
-        <p class="header-footer">Show Unit</p>
-        Jalan Unitex, Tajur – Kota Bogor 16141<br>
-        Jawa Barat, Indonesia<br>
-        Phone 0811 1403 280<br>
-        Email bambootajur@gmail.com<br>
-    </div>
-</div>
+        <div class="col-md-4">
+            <div class="detail-footer">
+                <p class="header-footer">Show Unit</p>
+                Jalan Unitex, Tajur – Kota Bogor 16141<br>
+                Jawa Barat, Indonesia<br>
+                Phone 0811 1403 280<br>
+                Email bambootajur@gmail.com<br>
+            </div>
+        </div>
 
-<div class="col-md-4 f-first">
-    <div class="img-footer f-first">
-        <p class="m-nol">Marketing by</p>
-        <img src="<?= base_url();?>assets/images/vendor/shinmichi.png" class="img-shinmichi" />
-    </div>
+        <div class="col-md-4 f-first">
+            <div class="img-footer f-first">
+                <p class="m-nol header-footer no-margin">Development by</p>
+                <img src="<?= base_url();?>assets/images/vendor/kbj.png" class="img-kbj" />
+                
+            </div>
 
-    <div class="img-footer">
-        <p>Development by</p>
-        <img src="<?= base_url();?>assets/images/vendor/kbj.png" class="img-kbj" />
-    </div>
-</div>
+            <div class="img-footer mt-20">
+                <p class="header-footer">Marketing by</p>
+                <img src="<?= base_url();?>assets/images/vendor/shinmichi.png" class="img-shinmichi" />
+            </div>
+        </div>
     
 <!-- icon -->
 
@@ -144,7 +145,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </ul>
 </div>
 
-<a href="javascript:" id="return-to-top"><i class="fas fa-chevron-up"></i></a>
+<!-- return to top -->
+<!-- <a href="javascript:" id="return-to-top"><i class="fas fa-chevron-up"></i></a> -->
+<a href="https://api.whatsapp.com/send?phone=628111403280&text=Halo%20Marketing%20Gallery%20Saya%20Mau%20Menanyakan%20.." class="floating-whatsapp" target="_blank">
+        <div class="f-whatsapp"> </div>
+        <p class="floating-teks">0811 1403 280</p>
+    </a>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -214,9 +220,9 @@ var lokasi = [
 ['Marketing Gallery', -6.638601, 106.832341, 5]
 ];
 
-  var latlong = { lat: -6.634867, lng: 106.8272923 };
+  var latlong = { lat: -6.635970, lng: 106.8310000 };
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
+    zoom: 16,
     center: latlong
   });
 
