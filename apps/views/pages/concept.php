@@ -108,7 +108,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div style="color: #000;background-color:#fff;text-align:center;text-align: justify;">
     <div class="row bg-footer no-margin">
 
-        <div class="col-md-4 f-first">
+        <div class="col-md-3 f-first">
             <div class="detail-footer">
                 <p class="header-footer">Marketing Gallery</p>
                 Jalan Raya Tajur No.30, Tajur – Kota Bogor 16141<br>
@@ -119,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="detail-footer">
                 <p class="header-footer">Show Unit</p>
                 Jalan Unitex, Tajur – Kota Bogor 16141<br>
@@ -129,14 +129,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
 
-        <div class="col-md-4 f-first">
+        <div class="col-md-3 f-first">
             <div class="img-footer f-first">
                 <p class="m-nol header-footer no-margin">Development by</p>
                 <img src="<?= base_url();?>assets/images/vendor/kbj.png" class="img-kbj" />
-                
             </div>
-
-            <div class="img-footer mt-20">
+        </div>
+        <div class="col-md-3 f-first">
+            <div class="img-footer">
                 <p class="header-footer">Marketing by</p>
                 <img src="<?= base_url();?>assets/images/vendor/shinmichi.png" class="img-shinmichi" />
             </div>
