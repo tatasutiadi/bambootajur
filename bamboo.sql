@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2018 at 10:36 PM
+-- Generation Time: Dec 19, 2018 at 05:13 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -37,31 +37,26 @@ CREATE TABLE `contact` (
   `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `contact`
+-- Table structure for table `receipt_mail`
 --
 
-INSERT INTO `contact` (`id`, `full_name`, `phone_number`, `email`, `message`, `status`, `type`, `created_at`) VALUES
-(1, 'as', '2', 'tatasutiadi@gmail.com', NULL, 1, 'phone_number', '2018-12-16 09:58:51'),
-(2, 'as', '2', 'tatasutiadi@gmail.com', NULL, 1, 'phone_number', '2018-12-16 16:04:43'),
-(3, 'Tata Sutiadi', '123456789', 'tatasutiadi@gmail.com', NULL, 1, 'phone_number', '2018-12-16 16:06:09'),
-(4, 'Tata Sutiadi', '123456789', 'tatasutiadi@gmail.com', NULL, 1, 'phone_number', '2018-12-16 16:06:21'),
-(5, 'Tata Sutiadi', '123456', 'tatasutiadi@gmail.com', NULL, 1, 'phone_number', '2018-12-16 16:06:53'),
-(6, 'Tata Sutiadi', '342', 'tatasutiadi@gmail.com', NULL, 1, 'phone_number', '2018-12-16 16:07:31'),
-(7, 'Tata Sutiadi', '123456', 'superadmin@pom.go.id', NULL, 1, 'phone_number', '2018-12-16 16:08:00'),
-(8, 'Tata Sutiadi', '12345', 'tatasutiadi@gmail.com', NULL, 1, 'phone_number', '2018-12-16 16:09:38'),
-(9, 'Tata Sutiadi', '123456', 'tatasutiadi@gmail.com', NULL, 1, 'phone_number', '2018-12-16 16:11:54'),
-(10, 'Tata Sutiadi', '7777', 'tatasutiadi@gmail.com', NULL, 1, 'phone_number', '2018-12-16 16:12:41'),
-(11, 'Demmy', '123456789', 'demi@gmail.com', 'Test', 1, 'contact', '2018-12-16 18:08:28'),
-(12, 'Demmy Test', '0989999', 'demmy@gmail.com', 'Test', 1, 'contact', '2018-12-16 18:12:32'),
-(13, 'Tata Sutiadi', '12345', 'tatasutiadi@gmail.com', 'Test Email', 1, 'contact', '2018-12-16 18:30:21'),
-(14, 'Tata Sutiadi', '12345', 'tatasutiadi@gmail.com', 'Test Email', 1, 'contact', '2018-12-16 18:31:00'),
-(15, 'Tata Sutiadi', '12345', 'tatasutiadi@gmail.com', 'Test Email', 1, 'contact', '2018-12-16 18:31:15'),
-(16, 'Demmy', '12345678', 'demmy@gmail.com', NULL, 1, 'phone_number', '2018-12-16 18:36:55'),
-(17, 'Demmy', '123456', 'demi@gmail.com', NULL, 1, 'phone_number', '2018-12-16 18:38:03'),
-(18, 'Demmy Test', '12345', 'demi@gmail.com', 'Test Email', 1, 'contact', '2018-12-16 18:38:33'),
-(19, 'Test Bamboo', '0899999', 'd.aminulloh@gmail.com', 'Dem kie waenya jang tes bamboo notif na, ulah alus2 da jang notif hungkul', 1, 'contact', '2018-12-16 18:43:59'),
-(20, 'Tata Sutiadi', '1234', 'tatasutiadi@gmail.com', NULL, 1, 'phone_number', '2018-12-17 19:05:40');
+CREATE TABLE `receipt_mail` (
+  `id` int(255) NOT NULL,
+  `owner` varchar(150) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `created` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `receipt_mail`
+--
+
+INSERT INTO `receipt_mail` (`id`, `owner`, `email`, `created`) VALUES
+(1, 'Bamboo Tajur', 'tatasutiadi@gmail.com', '0000-00-00 00:00:00'),
+(2, 'Dicky Hilman', 'tatasutiadi.dev@gmail.com', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -74,6 +69,12 @@ ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `receipt_mail`
+--
+ALTER TABLE `receipt_mail`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -81,7 +82,12 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `receipt_mail`
+--
+ALTER TABLE `receipt_mail`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
