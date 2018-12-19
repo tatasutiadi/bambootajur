@@ -111,7 +111,7 @@ class Pages extends CI_Controller {
 		$ins = $this->db->insert('contact', $data);
 		
 		if($ins){
-			$this->sendMail($data);
+			$this->receipt_mail($data);
 		   	$datas['save'] = true;
 		}else{
 			$datas['save'] = false;
@@ -135,7 +135,7 @@ class Pages extends CI_Controller {
 		
 		if($ins){
 		   $datas['save'] = true;
-		   $this->sendMail($data);
+		   $this->receipt_mail($data);
 		}else{
 			$datas['save'] = false;
 		}
@@ -143,13 +143,13 @@ class Pages extends CI_Controller {
 		echo json_encode($datas);
 	}
 
-	protected function sendMail($data){
+	protected function sendMail($data,$email){
 		$this->load->library('PHPMailerAutoload');
 		$subject = 'Alert Kontak Bamboo Tajur';
-		$message = 'Nama : '.$data['full_name']
-					.'<br /> Email : '.$data['email']
-					.'<br /> No Telepon : '.$data['phone_number']
-					.'<br />'.(!empty($data['message'])? 'Pesan : '. $data['message'] : null).'';
+		$message = '<h3>Inquiry From : </h3><br /><br />Nama : '.$data['full_name']
+					.'<br /><br /> No Hp : '.$data['phone_number']
+					.'<br /><br /> Email : '.$data['email']
+					.(!empty($data['message'])? '<br /><br /> Pesan : '. $data['message']." <br /><br /> Thanks!" : null." <br /><br /> Thanks!").'';
 		$body = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 		<html xmlns="http://www.w3.org/1999/xhtml">
 		<head>
@@ -183,12 +183,20 @@ class Pages extends CI_Controller {
 					)
 				);
 		$mail->isHTML(true);
-		$mail->SetFrom('tatasutiadi@gmail.com', 'No-Reply Bamboo');  //Who is sending the email       
+		$mail->SetFrom($email->email, 'No-Reply Bamboo');  //Who is sending the email       
 		$mail->Subject    = $subject;
 		$mail->Body      = $body;
-		$destino = "tatasutiadi@gmail.com";
-		$mail->AddAddress($destino, "Demmy Amminulloh");		
+		$destino = "".$email->email."";
+		$mail->AddAddress($destino, $email->owner);		
 		$mail->Send();
+	}
+
+	protected function receipt_mail($data){
+		$query = $this->db->query('SELECT owner, email FROM receipt_mail');
+		foreach ($query->result() as $row)
+		{
+	        $this->sendMail($data,$row);
+		}
 	}
 
 }
