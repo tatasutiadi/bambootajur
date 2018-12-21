@@ -64,21 +64,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="<?= base_url();?>assets/images/detail/type-aa-lanskap.jpg" alt="Type A" width="1100" height="400">
+                    <img src="<?= base_url();?>assets/images/detail/type-aa-potred.jpg" alt="Type A" width="1100" height="400">
                     <div class="carousel-caption">
                       <!-- <h3>Type A</h3>
                       <p>We had such a great time in LA!</p> -->
                     </div>   
                 </div>
                 <div class="carousel-item">
-                    <img src="<?= base_url();?>assets/images/detail/type-bb-lanskap.jpg" alt="Type B" width="1100" height="400">
+                    <img src="<?= base_url();?>assets/images/detail/type-bb-potred.jpg" alt="Type B" width="1100" height="400">
                     <div class="carousel-caption">
                         <!-- <h3>Type B</h3>
                         <p>Thank you, Chicago!</p> -->
                     </div>   
                 </div>
                 <div class="carousel-item">
-                    <img src="<?= base_url();?>assets/images/detail/type-cc-lanskap.jpg" alt="Type C" width="1100" height="400">
+                    <img src="<?= base_url();?>assets/images/detail/type-cc-potred.jpg" alt="Type C" width="1100" height="400">
                     <div class="carousel-caption">
                         <!-- <h3>Type C</h3>
                         <p>We love the Big Apple!</p> -->
